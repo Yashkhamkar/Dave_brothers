@@ -13,9 +13,6 @@ const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
 });
-app.get("/", (req, res) => {
-  res.send("hello");
-});
 app.use(cors());
 app.use("/user", userRoutes);
 app.use(express.static(path.join(__dirname, "../frontend/build")));
